@@ -1,0 +1,39 @@
+{
+  "display": {
+    "icon": {
+      "item": "blobcatplush:blobcatadvancementitem"
+    },
+    "title": {
+      "translate": "advancements.so_cute_advancement.title"
+    },
+    "description": {
+      "translate": "advancements.so_cute_advancement.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "so_cute_advancement_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "blobcatplush:blobcat"
+            ],
+            "count": {
+              "min": 1,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 10
+  },
+  "parent": "minecraft:story/smelt_iron"
+}

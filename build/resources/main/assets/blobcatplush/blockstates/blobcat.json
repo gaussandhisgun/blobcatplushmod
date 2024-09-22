@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "blobcatplush:block/blobcat"
+    },
+    "facing=east": {
+      "model": "blobcatplush:block/blobcat",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "blobcatplush:block/blobcat",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "blobcatplush:block/blobcat",
+      "y": 270
+    }
+  }
+}

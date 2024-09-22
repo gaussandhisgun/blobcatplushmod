@@ -1,0 +1,21 @@
+{
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2024-09-22 15:02:37 +0300"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:plains": "2024-09-22 15:02:37 +0300"
+    },
+    "done": false
+  },
+  "blobcatplush:so_cute_advancement": {
+    "criteria": {
+      "so_cute_advancement_0": "2024-09-22 15:02:39 +0300"
+    },
+    "done": true
+  },
+  "DataVersion": 3465
+}
