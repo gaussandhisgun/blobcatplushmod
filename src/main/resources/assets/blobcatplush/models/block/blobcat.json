@@ -5,5 +5,5 @@
     "particle": "blobcatplush:block/blobcat",
     "0": "blobcatplush:block/blobcat"
   },
-  "render_type": "translucent"
+  "render_type": "solid"
 }

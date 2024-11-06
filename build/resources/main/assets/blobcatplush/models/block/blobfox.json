@@ -1,0 +1,9 @@
+{
+  "parent": "blobcatplush:custom/blobfox",
+  "textures": {
+    "all": "blobcatplush:block/blobfox",
+    "particle": "blobcatplush:block/blobfox",
+    "1": "blobcatplush:block/blobfox"
+  },
+  "render_type": "solid"
+}

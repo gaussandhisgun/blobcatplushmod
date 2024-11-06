@@ -4,6 +4,7 @@ package in.gravitos.blobcatplush.block;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.Fluids;
@@ -22,11 +23,17 @@ import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Mob;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
+
+import in.gravitos.blobcatplush.procedures.BlobcatOnBlockRightClickedProcedure;
 
 public class BlobcatBlock extends Block implements SimpleWaterloggedBlock {
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
@@ -60,14 +67,10 @@ public class BlobcatBlock extends Block implements SimpleWaterloggedBlock {
 	@Override
 	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 		return switch (state.getValue(FACING)) {
-			default -> Shapes.or(box(4, 1, 3, 12, 9, 13), box(4, 9, 4, 12, 10, 12), box(4, 0, 4, 12, 1, 12), box(12, 1, 4, 13, 9, 12), box(3, 1, 4, 4, 9, 12), box(12, 9, 7, 13, 11, 9), box(3, 9, 7, 4, 11, 9), box(10, 10, 7, 12, 12, 9),
-					box(4, 10, 7, 6, 12, 9), box(9, 10, 7, 10, 11, 9), box(6, 10, 7, 7, 11, 9));
-			case NORTH -> Shapes.or(box(4, 1, 3, 12, 9, 13), box(4, 9, 4, 12, 10, 12), box(4, 0, 4, 12, 1, 12), box(3, 1, 4, 4, 9, 12), box(12, 1, 4, 13, 9, 12), box(3, 9, 7, 4, 11, 9), box(12, 9, 7, 13, 11, 9), box(4, 10, 7, 6, 12, 9),
-					box(10, 10, 7, 12, 12, 9), box(6, 10, 7, 7, 11, 9), box(9, 10, 7, 10, 11, 9));
-			case EAST -> Shapes.or(box(3, 1, 4, 13, 9, 12), box(4, 9, 4, 12, 10, 12), box(4, 0, 4, 12, 1, 12), box(4, 1, 3, 12, 9, 4), box(4, 1, 12, 12, 9, 13), box(7, 9, 3, 9, 11, 4), box(7, 9, 12, 9, 11, 13), box(7, 10, 4, 9, 12, 6),
-					box(7, 10, 10, 9, 12, 12), box(7, 10, 6, 9, 11, 7), box(7, 10, 9, 9, 11, 10));
-			case WEST -> Shapes.or(box(3, 1, 4, 13, 9, 12), box(4, 9, 4, 12, 10, 12), box(4, 0, 4, 12, 1, 12), box(4, 1, 12, 12, 9, 13), box(4, 1, 3, 12, 9, 4), box(7, 9, 12, 9, 11, 13), box(7, 9, 3, 9, 11, 4), box(7, 10, 10, 9, 12, 12),
-					box(7, 10, 4, 9, 12, 6), box(7, 10, 9, 9, 11, 10), box(7, 10, 6, 9, 11, 7));
+			default -> box(3, 0, 3, 13, 10, 13);
+			case NORTH -> box(3, 0, 3, 13, 10, 13);
+			case EAST -> box(3, 0, 3, 13, 10, 13);
+			case WEST -> box(3, 0, 3, 13, 10, 13);
 		};
 	}
 
@@ -111,5 +114,19 @@ public class BlobcatBlock extends Block implements SimpleWaterloggedBlock {
 	@Override
 	public BlockPathTypes getBlockPathType(BlockState state, BlockGetter world, BlockPos pos, Mob entity) {
 		return BlockPathTypes.BLOCKED;
+	}
+
+	@Override
+	public InteractionResult use(BlockState blockstate, Level world, BlockPos pos, Player entity, InteractionHand hand, BlockHitResult hit) {
+		super.use(blockstate, world, pos, entity, hand, hit);
+		int x = pos.getX();
+		int y = pos.getY();
+		int z = pos.getZ();
+		double hitX = hit.getLocation().x;
+		double hitY = hit.getLocation().y;
+		double hitZ = hit.getLocation().z;
+		Direction direction = hit.getDirection();
+		BlobcatOnBlockRightClickedProcedure.execute(world, x, y, z);
+		return InteractionResult.SUCCESS;
 	}
 }

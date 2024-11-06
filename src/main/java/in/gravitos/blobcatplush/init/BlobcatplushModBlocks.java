@@ -10,12 +10,14 @@ import net.minecraftforge.registries.DeferredRegister;
 
 import net.minecraft.world.level.block.Block;
 
+import in.gravitos.blobcatplush.block.BlobfoxBlock;
 import in.gravitos.blobcatplush.block.BlobcatBlock;
 import in.gravitos.blobcatplush.BlobcatplushMod;
 
 public class BlobcatplushModBlocks {
 	public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, BlobcatplushMod.MODID);
 	public static final RegistryObject<Block> BLOBCAT = REGISTRY.register("blobcat", () -> new BlobcatBlock());
+	public static final RegistryObject<Block> BLOBFOX = REGISTRY.register("blobfox", () -> new BlobfoxBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

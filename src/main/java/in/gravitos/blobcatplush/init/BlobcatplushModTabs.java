@@ -23,6 +23,7 @@ public class BlobcatplushModTabs {
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
 		if (tabData.getTabKey() == CreativeModeTabs.COLORED_BLOCKS) {
 			tabData.accept(BlobcatplushModBlocks.BLOBCAT.get().asItem());
+			tabData.accept(BlobcatplushModBlocks.BLOBFOX.get().asItem());
 		}
 	}
 }

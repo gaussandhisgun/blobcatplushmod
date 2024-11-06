@@ -19,6 +19,7 @@ public class BlobcatplushModItems {
 	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, BlobcatplushMod.MODID);
 	public static final RegistryObject<Item> BLOBCAT = block(BlobcatplushModBlocks.BLOBCAT);
 	public static final RegistryObject<Item> BLOBCATADVANCEMENTITEM = REGISTRY.register("blobcatadvancementitem", () -> new BlobcatadvancementitemItem());
+	public static final RegistryObject<Item> BLOBFOX = block(BlobcatplushModBlocks.BLOBFOX);
 
 	// Start of user code block custom items
 	// End of user code block custom items

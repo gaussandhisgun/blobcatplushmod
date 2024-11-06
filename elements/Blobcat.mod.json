@@ -20,106 +20,16 @@
     "isItemTinted": false,
     "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "TRANSLUCENT",
+    "transparencyType": "SOLID",
     "disableOffset": false,
     "boundingBoxes": [
       {
-        "mx": 4.0,
-        "my": 1.0,
-        "mz": 3.0,
-        "Mx": 12.0,
-        "My": 9.0,
-        "Mz": 13.0,
-        "subtract": false
-      },
-      {
-        "mx": 4.0,
-        "my": 9.0,
-        "mz": 4.0,
-        "Mx": 12.0,
-        "My": 10.0,
-        "Mz": 12.0,
-        "subtract": false
-      },
-      {
-        "mx": 4.0,
+        "mx": 3.0,
         "my": 0.0,
-        "mz": 4.0,
-        "Mx": 12.0,
-        "My": 1.0,
-        "Mz": 12.0,
-        "subtract": false
-      },
-      {
-        "mx": 3.0,
-        "my": 1.0,
-        "mz": 4.0,
-        "Mx": 4.0,
-        "My": 9.0,
-        "Mz": 12.0,
-        "subtract": false
-      },
-      {
-        "mx": 12.0,
-        "my": 1.0,
-        "mz": 4.0,
+        "mz": 3.0,
         "Mx": 13.0,
-        "My": 9.0,
-        "Mz": 12.0,
-        "subtract": false
-      },
-      {
-        "mx": 3.0,
-        "my": 9.0,
-        "mz": 7.0,
-        "Mx": 4.0,
-        "My": 11.0,
-        "Mz": 9.0,
-        "subtract": false
-      },
-      {
-        "mx": 12.0,
-        "my": 9.0,
-        "mz": 7.0,
-        "Mx": 13.0,
-        "My": 11.0,
-        "Mz": 9.0,
-        "subtract": false
-      },
-      {
-        "mx": 4.0,
-        "my": 10.0,
-        "mz": 7.0,
-        "Mx": 6.0,
-        "My": 12.0,
-        "Mz": 9.0,
-        "subtract": false
-      },
-      {
-        "mx": 10.0,
-        "my": 10.0,
-        "mz": 7.0,
-        "Mx": 12.0,
-        "My": 12.0,
-        "Mz": 9.0,
-        "subtract": false
-      },
-      {
-        "mx": 6.0,
-        "my": 10.0,
-        "mz": 7.0,
-        "Mx": 7.0,
-        "My": 11.0,
-        "Mz": 9.0,
-        "subtract": false
-      },
-      {
-        "mx": 9.0,
-        "my": 10.0,
-        "mz": 7.0,
-        "Mx": 10.0,
-        "My": 11.0,
-        "Mz": 9.0,
+        "My": 10.0,
+        "Mz": 13.0,
         "subtract": false
       }
     ],
@@ -215,6 +125,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onRightClicked": {
+      "name": "BlobcatOnBlockRightClicked"
+    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
