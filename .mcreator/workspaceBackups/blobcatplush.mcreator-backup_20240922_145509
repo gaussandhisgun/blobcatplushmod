@@ -1,0 +1,61 @@
+{
+  "mod_elements": [
+    {
+      "name": "Blobcat",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blobcat",
+      "metadata": {
+        "files": [
+          "src/main/java/in/gravitos/blobcatplush/block/BlobcatBlock.java",
+          "src/main/resources/data/blobcatplush/loot_tables/blocks/blobcat.json",
+          "src/main/resources/assets/blobcatplush/models/item/blobcat.json",
+          "src/main/resources/assets/blobcatplush/blockstates/blobcat.json",
+          "src/main/resources/assets/blobcatplush/models/block/blobcat.json"
+        ]
+      }
+    },
+    {
+      "name": "PlushLoomRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plush_loom_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blobcatplush/recipes/blobcatplush_stonecutter_recipe.json"
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "tag_elements": {},
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "block.blobcatplush.blobcat": "Blobcat"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "blobcatplush",
+    "modName": "Blobcat Plush",
+    "version": "1.0.0",
+    "author": "gravitos, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.20.1",
+    "modElementsPackage": "in.gravitos.blobcatplush"
+  },
+  "mcreatorVersion": 202400232117
+}
